@@ -1,0 +1,43 @@
+* {
+  background-color: #f5f1ea;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+hr.line {
+  color: #c28285;
+  text-align: center;
+}
+body {
+  margin: 0px;
+  padding: 40px;
+}
+
+h1 {
+  color: #c28285;
+  font-family: "Playfair Display SC", serif;
+  font-size: 4em;
+  padding-top: 100px;
+  width: 100%;
+  text-align: center;
+  padding: 40px;
+}
+
+h2,
+.heading {
+  color: #c6aa9d;
+  font-size: 2em;
+  padding-bottom: 40px;
+  padding-left: 30px;
+}
+
+p {
+  text-align: left;
+  padding: 40px;
+  width: 100%;
+}
+
+ul,
+label {
+  color: #8f8681;
+  padding-left: 40px;
+}

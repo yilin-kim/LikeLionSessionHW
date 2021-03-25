@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cantata+One&family=Playfair+Display+SC:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Blog | Yilin</title>
+  </head>
+  <body>
+    <h1>Yilin</h1>
+    <hr class="line" />
+    <h2 class="heading">Media & Computer 19</h2>
+    <div>
+      <h3 class="heading">What I Like</h3>
+      <ul>
+        <li>Milktea</li>
+        <li>Cake</li>
+        <li>Cookie</li>
+        <li>Photography</li>
+      </ul>
+    </div>
+    <a href="https://www.instagram.com/a.irin.ness/" target="_blank"
+      ><img
+        src="https://i.pinimg.com/564x/47/25/be/4725bed8618acc26d258657d54f0bfbb.jpg"
+        alt="Rory Gilmore"
+    /></a>
+    <br />
+
+    <form>
+      <label for="username">
+        <span class="material-icons"> account_circle </span>
+        <span>Login: </span>
+        <input type="text" name="id" value="username" />
+      </label>
+      <label for="password">
+        <input type="password" name="pw" value="password" />
+      </label>
+      <br />
+
+      <span class="heading">Relationship:</span>
+      <div class="relationship-form">
+        <input
+          type="radio"
+          id="relation1"
+          name="relationship"
+          value="friend"
+          checked
+        />
+        <label for="relation1">friend</label>
+
+        <input
+          type="radio"
+          id="relation2"
+          name="relationship"
+          value="family"
+          checked
+        />
+        <label for="relation2">family</label>
+
+        <input
+          type="radio"
+          id="relation3"
+          name="relationship"
+          value="about to know"
+          checked
+        />
+        <label for="relation3">about to know</label>
+      </div>
+      <div class="viewer-likes">
+        <input type="checkbox" id="likes1" name="likes1" value="Milktea" />
+        <label for="likes1">Milktea</label>
+        <input type="checkbox" id="likes2" name="likes2" value="Cake" />
+        <label for="likes2">Cake</label>
+        <input type="checkbox" id="likes3" name="likes3" value="Cookie" />
+        <label for="likes3">Cookie</label>
+        <input type="checkbox" id="likes4" name="likes4" value="Photography" />
+        <label for="likes4">Photography</label>
+      </div>
+      <br />
+      <button type="submit">submit</button>
+    </form>
+  </body>
+</html>
