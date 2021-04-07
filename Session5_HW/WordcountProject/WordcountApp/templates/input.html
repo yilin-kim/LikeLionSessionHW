@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'input.css' %}" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TEXT COUNTER</title>
+  </head>
+  <body>
+    <div><h1>TEXT COUNTER</h1></div>
+    <p>Write or paste your text here.</p>
+    <form action="{% url 'result' %}" method="post">
+      {% csrf_token %}
+      <textarea name="text" id="" cols="30" rows="10"></textarea>
+      <br />
+      <input type="submit" value="count" />
+    </form>
+  </body>
+</html>

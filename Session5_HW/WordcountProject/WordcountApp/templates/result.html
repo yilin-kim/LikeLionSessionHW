@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'result.css' %}" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Count Result</title>
+  </head>
+  <body>
+    <div>
+      <p>
+        <span class="white">Text:<br /></span> {{text}}
+      </p>
+      <p><span class="white">Number of Letters:</span> {{total_len}}</p>
+      <p>
+        <span class="white">Number of Letters(Blank excluded):</span>
+        {{no_blank_len}}
+      </p>
+      <p><span class="white">Number of Words:</span> {{word_len}}</p>
+    </div>
+  </body>
+</html>

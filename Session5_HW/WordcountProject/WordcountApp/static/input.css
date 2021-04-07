@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+
+* {
+  font-family: "Fredoka One", cursive;
+  text-align: center;
+  background-color: #374d7d;
+  color: #f8cdcd;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  margin-right: 10px;
+}
+input[type="submit"] {
+  border-radius: 10px;
+  border-color: #fdfdfe;
+}
+textarea {
+  color: #fdfdfe;
+}
+textarea[name="text"] {
+  border-color: #fdfdfe;
+  border-radius: 10px;
+}
