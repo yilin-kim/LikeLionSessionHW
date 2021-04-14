@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'index.css'%}" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <title>Detail</title>
+  </head>
+  <body>
+    <h2>{{article.title}}</h2>
+    <p>{{article.category}}</p>
+    <p>{{article.content}}</p>
+    <p>{{article.time}}</p>
+    <a href="{% url 'index' %}">목록</a>
+  </body>
+</html>
