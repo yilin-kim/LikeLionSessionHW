@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'new.css' %}" />
+    <title>NEW TASK</title>
+  </head>
+  <body>
+    <form action="" method="post">
+      {% csrf_token %}
+      <div class="title_wrapper">
+        <label for="title">TITLE</label>
+        <br />
+        <input
+          type="text"
+          id="title"
+          name="title"
+          placeholder="할 일의 제목을 입력해주세요."
+        />
+      </div>
+
+      <div class="content_wrapper">
+        <label for="content">CONTENT</label>
+        <br />
+        <textarea
+          name="content"
+          id="content"
+          cols="30"
+          rows="10"
+          placeholder="세부 내용을 입력해주세요."
+        ></textarea>
+      </div>
+
+      <div class="duedate_wrapper">
+        <label for="duedate">DUE DATE</label>
+        <br />
+        <input type="datetime-local" id="duedate" name="duedate" />
+      </div>
+      <br />
+      <div class="button_styler">
+        <button type="submit">CREATE</button>
+      </div>
+    </form>
+  </body>
+</html>

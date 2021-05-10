@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'detail.css' %}" />
+    <title>DETAIL</title>
+  </head>
+  <body>
+    <div class="box_wrapper">
+      <div class="title_wrapper">
+        <h2>TASK</h2>
+        <p>{{ task.title }}</p>
+      </div>
+      <br />
+      <div class="content_wrapper">
+        <h2>CONTENT</h2>
+        <p>{{ task.content }}</p>
+      </div>
+      <br />
+      <div class="duedate_wrapper">
+        <h2>DUE DATE</h2>
+        <p>{{ task.duedate }}</p>
+      </div>
+      <br />
+    </div>
+    <div class="buttons_wrapper">
+      <div class="button_styler">
+        <a href="{% url 'home'%}">HOME</a>
+      </div>
+      <div class="button_styler">
+        <a href="{% url 'edit' task.pk %}">EDIT</a>
+      </div>
+      <div class="button_styler">
+        <a href="{% url 'delete' task.pk %}">DELETE</a>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'home.css' %}" />
+    <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet" />
+    <title>TODO LIST PROJECT</title>
+  </head>
+  <body>
+    <div class="header">
+      <h1>
+        <i
+          class="em em-blossom"
+          aria-role="presentation"
+          aria-label="BLOSSOM"
+        ></i>
+        TO-DO LIST
+      </h1>
+    </div>
+    <br />
+    <div class="list">
+      <ul>
+        {% for task in tasks %}
+        <li>
+          <label>
+            <input type="checkbox" name="" />
+            <a href="{% url 'detail' task.pk %}">{{ task.title }}</a>
+          </label>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <br />
+    <div class="button">
+      <a href="{% url 'new' %}">+ ADD</a>
+    </div>
+  </body>
+</html>
