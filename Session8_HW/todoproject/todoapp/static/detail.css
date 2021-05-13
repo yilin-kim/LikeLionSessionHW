@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #dce7f2;
+}
+.header {
+  position: relative;
+  background: #84abd2;
+  width: 350px;
+  height: 60px;
+  border-radius: 3px;
+  box-shadow: 0px 0px 5px 2px#B4C8DC;
+}
+
+.header h1 {
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 15px 20px;
+}
+.box_wrapper {
+  position: relative;
+  padding: 30px;
+  background: #ffffff;
+  width: 350px;
+  border-radius: 3px;
+  box-shadow: 0px 0px 5px 2px #d2e3f4;
+}
+
+p {
+  color: #768799;
+  width: 350px;
+  border: 0px;
+  border-radius: 3px;
+}
+
+.title_wrapper p,
+.duedate_wrapper p {
+  height: 30px;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #84abd2;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+input {
+  height: 50px;
+  border-color: #84abd2;
+  border-radius: 50px;
+}
+button {
+  color: white;
+  border-color: #84abd2;
+}
+
+.button_styler {
+  border-radius: 50px;
+  width: 90px;
+  height: 50px;
+  background-color: #84abd2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  box-shadow: 0px 0px 4px 1px#B4C8DC;
+}
+
+.buttons_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: 50px;
+  margin: 10px;
+}
+
+li {
+  position: relative;
+  list-style: none;
+  padding: 9px 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+a:link,
+a:visited {
+  color: white;
+  font-weight: 500;
+}

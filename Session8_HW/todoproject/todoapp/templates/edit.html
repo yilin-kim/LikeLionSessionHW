@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'edit.css' %}" />
+    <title>EDIT</title>
+  </head>
+  <body>
+    <div class="header">
+      <h1>
+        <i
+          class="em em-blossom"
+          aria-role="presentation"
+          aria-label="BLOSSOM"
+        ></i>
+        TO-DO LIST
+      </h1>
+    </div>
+    <br />
+    <div class="box_wrapper">
+      <form action="" method="post">
+        {% csrf_token %}
+        <div>
+          <label for="title">TASK</label>
+          <br />
+          <input type="text" id="title" name="title" value="{{ task.title }}" />
+        </div>
+        <div>
+          <label for="content">CONTENT</label>
+          <br />
+          <textarea name="content" id="content" cols="30" rows="10">
+      {{ task.content }}</textarea
+          >
+        </div>
+        <div>
+          <label for="duedate">DUE DATE</label>
+          <br />
+          <input
+            type="datetime-local"
+            id="duedate"
+            name="duedate"
+            value="{{ task.duedate }}"
+          />
+        </div>
+      </form>
+    </div>
+    <div class="button_styler">
+      <button type="submit">SAVE</button>
+    </div>
+  </body>
+</html>
