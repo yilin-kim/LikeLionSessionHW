@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    {% load static %}
+    {% load socialaccount %}
+    {% providers_media_js %}
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'base.css' %}"/>
+    {% block css %}{% endblock %}
+    <title>TODO LIST PROJECT</title>
+  </head>
+
+  <body>
+    <div class="nav_bar">
+      <a class="nav_item" href="{% url 'home' %}">HOME</a>
+      {% if user.is_authenticated %}
+        <a class="nav_item">
+          안녕하세요,
+          {{ user.username }}님</a>
+        <a class="nav_item" href="{% url 'logout'%}">LOGOUT</a>
+      {% else %}
+        <a class="nav_item" href="{% url 'login'%}">LOGIN</a>
+        <a class="nav_item" href="{% provider_login_url 'kakao' %}">KAKAO</a>
+        <a class="nav_item" href="{% url 'signup' %}">SIGNUP</a>
+        <a class="nav_item" href="{% url 'mypage' %}">MYPAGE</a>
+      {% endif %}
+    </div>
+
+    <div class="header">
+      <h1>
+        <i class="em em-blossom" aria-role="presentation" aria-label="BLOSSOM"></i>
+        {% block header %}{% endblock header %}
+      </h1>
+    </div>
+    <br/>
+
+    <div class="container">
+      {% block container %}{% endblock container %}
+    </div>
+    {% block buttons %}{% endblock buttons %}
+
+    <div class="comments">
+      {% block comments %}{% endblock comments %}
+    </div>
+  </body>
+
+</html>

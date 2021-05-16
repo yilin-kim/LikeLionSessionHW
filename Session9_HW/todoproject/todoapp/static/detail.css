@@ -1,0 +1,88 @@
+.box_wrapper {
+  position: relative;
+  padding: 30px;
+}
+
+p {
+  color: #768799;
+  width: 350px;
+  border: 0px;
+  border-radius: 3px;
+}
+
+.title_wrapper p,
+.duedate_wrapper p {
+  height: 30px;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #84abd2;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+input {
+  height: 50px;
+  border: 1px #84abd2 solid;
+  border-radius: 50px;
+  padding: 10px;
+}
+
+button {
+  color: white;
+  font-size: 10px;
+}
+
+.button_styler {
+  border-radius: 50px;
+  width: 90px;
+  height: 50px;
+  background-color: #84abd2;
+  border: 1px #84abd2 solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  box-shadow: 0px 0px 4px 1px#B4C8DC;
+}
+
+.buttons_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: 50px;
+  margin: 10px;
+}
+
+li {
+  position: relative;
+  list-style: none;
+  padding: 10px 0;
+  color: #768799;
+  font-size: 10px;
+}
+
+a.whitetext:link,
+a.whitetext:visited {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+a.nav_item,
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #768799;
+  font-size: 16px;
+  font-weight: 600;
+}

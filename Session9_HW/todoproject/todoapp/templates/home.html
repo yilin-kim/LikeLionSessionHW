@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block css %}
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'home.css' %}"/>
+{% endblock %}
+
+<!-- header -->
+{% block header %}
+  TODO LIST
+{% endblock header %}
+
+<!-- content -->
+{% block container %}
+  <ul>
+    {% for task in tasks %}
+      <li>
+        <label>
+          <input type="checkbox" name=""/>
+          <a href="{% url 'detail' task.pk %}">{{ task.title }}</a>
+        </label>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock container %}
+
+<!-- ADD button -->
+{% block buttons %}
+  <br>
+  <div class="button">
+    <a href="{% url 'new' %}">+ ADD</a>
+  </div>
+{% endblock buttons %}

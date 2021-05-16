@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% block css %}
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'detail.css' %}"/>
+{% endblock %}
+
+<!-- header -->
+{% block header %}
+  DETAIL
+{% endblock header %}
+
+{% block container %}
+  <div class="box_wrapper">
+    <div class="title_wrapper">
+      <h2>TASK</h2>
+      <p>{{ task.title }}</p>
+    </div>
+    <br/>
+    <div class="content_wrapper">
+      <h2>CONTENT</h2>
+      <p>{{ task.content }}</p>
+    </div>
+    <br/>
+    <div class="duedate_wrapper">
+      <h2>DUE DATE</h2>
+      <p>{{ task.duedate }}</p>
+    </div>
+    <br/>
+  </div>
+{% endblock container %}
+
+{% block buttons %}
+  <div class="buttons_wrapper">
+    <div class="button_styler">
+      <a class="whitetext" href="{% url 'home'%}">HOME</a>
+    </div>
+    <!-- {% if user.is_authenticated and task.author.pk == user.pk %} -->
+    <div class="button_styler">
+      <a href="{% url 'edit' task.pk %}">EDIT</a>
+    </div>
+    <div class="button_styler">
+      <a href="{% url 'delete' task.pk %}">DELETE</a>
+    </div>
+    <!-- {% endif %} -->
+  </div>
+{% endblock buttons %}
+
+{% block comments %}
+  <h2>COMMENT</h2>
+  {% if user.is_authenticated %}
+    <form method="POST">
+      {% csrf_token %}
+      <input class="comment_box" type="text" name="content" size="27" placeholder="댓글 입력하세용"/>
+      <button class="button_styler" type="submit">POST</button>
+    </form>
+  {% endif %}
+
+  {% for comment in task.comments.all %}
+    <li>{{ comment.content }}
+      {% if user.is_authenticated and comment.author.pk == user.pk %}
+        <a class="icon" href="{% url 'delete_comment' task.pk comment.pk %}"/><img src="../static/delete_icon.png"></a>
+    {% endif %}
+  </li>
+{% endfor %}
+{% endblock comments %}

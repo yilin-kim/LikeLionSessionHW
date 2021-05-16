@@ -1,0 +1,72 @@
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 30px;
+}
+
+.title_wrapper,
+.content_wrapper,
+.duedate_wrapper {
+  position: relative;
+  width: 350px;
+  border-radius: 3px;
+  padding: 0px 30px 0px 30px;
+}
+
+input,
+textarea {
+  position: relative;
+  width: 290px;
+  border: 1.5px #84abd2 solid;
+  border-radius: 3px;
+}
+
+input {
+  height: 30px;
+}
+
+label {
+  font-size: 20px;
+  font-weight: 700;
+  color: #84abd2;
+}
+
+.button_styler {
+  border-radius: 50px;
+  width: 150px;
+  height: 50px;
+  background-color: #84abd2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 4px 1px#B4C8DC;
+}
+
+button {
+  background-color: #84abd2;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link {
+  color: #768799;
+  font-weight: 500;
+}
+
+a:visited {
+  color: #768799;
+  font-weight: 500;
+}
+
+input:focus {
+  outline: none;
+}

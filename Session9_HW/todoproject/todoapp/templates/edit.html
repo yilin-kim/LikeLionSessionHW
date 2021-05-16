@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block css %}
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'edit.css' %}"/>
+{% endblock %}
+
+<!-- header -->
+{% block header %}
+  EDIT
+{% endblock header %}
+
+{% block container %}
+  <form action="" method="post">
+    {% csrf_token %}
+    <div class="title_wrapper">
+      <label for="title">TASK</label>
+      <br/>
+      <input type="text" id="title" name="title" value="{{ task.title }}"/>
+    </div>
+
+    <div class="content_wrapper">
+      <label for="content">CONTENT</label>
+      <br/>
+      <textarea name="content" id="content" cols="30" rows="10">
+        {{ task.content }}</textarea>
+    </div>
+
+    <div class="duedate_wrapper">
+      <label for="duedate">DUE DATE</label>
+      <br/>
+      <input type="datetime-local" id="duedate" name="duedate" value="{{ task.duedate }}"/>
+    </div>
+    <div class="button_styler">
+      <button type="submit">SAVE</button>
+    </div>
+  </form>
+{% endblock container %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block css %}
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'login.css' %}"/>
+{% endblock %}
+
+{% block header %}
+  LOGIN
+{% endblock header %}
+
+{% block container %}
+  {% if error %}
+    <h3>{{ error }}</h3>
+  {% endif %}
+  <form method="POST">
+    {% csrf_token %}
+    <input class="textbox_stlyer" type="text" name="username" placeholder="USERNAME">
+    <input class="textbox_stlyer" type="password" name="password" placeholder="PASSWORD">
+    <button class="button_styler" type="submit">LOGIN</button>
+  </form>
+{% endblock container %}
