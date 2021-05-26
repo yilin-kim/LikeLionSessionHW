@@ -13,6 +13,7 @@
 
   <form action="" method="post">
     {% csrf_token %}
+
     <div class="title_wrapper">
       <label for="title">TITLE</label>
       <br/>
@@ -22,7 +23,23 @@
     <div class="content_wrapper">
       <label for="content">CONTENT</label>
       <br/>
-      <textarea name="content" id="content" cols="30" rows="10" placeholder="세부 내용을 입력해주세요."></textarea>
+      <script>
+        function textcounter() {
+          document
+            .getElementById("counting")
+            .innerHTML = document
+            .getElementById("content")
+            .value
+            .length;
+        }
+      </script>
+      <textarea name="content" id="content" onkeyup="textcounter()" cols="30" rows="10" placeholder="세부 내용을 입력해주세요."></textarea>
+
+      <div class="text_align_right">TEXT COUNT:
+        <span id="counting">
+          0</span>
+      </div>
+      <br>
     </div>
 
     <div class="duedate_wrapper">

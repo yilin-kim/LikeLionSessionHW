@@ -16,14 +16,28 @@ body {
   background: #dce7f2;
 }
 
+.hidden {
+  display: none;
+}
+.menu {
+  position: relative;
+  bottom: 100px;
+}
+.menus {
+  position: relative;
+  bottom: 80px;
+}
 .nav_bar {
-  position: fixed;
-  width: 100%;
+  width: 100vh;
   top: 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
+
+/* .nav_menu {
+  position: absolute;
+} */
 
 .nav_item a:link,
 .nav_item a:visited {
