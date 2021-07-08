@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="todoList.css">
+    <title>Awesome</title>
+  </head>
+
+  <body>
+    <div id="myDIV" class="header">
+      <h2>To Do List</h2>
+      <!-- Trigger/Open The Modal -->
+      <span>
+        <button id="myBtn">하기 싫나요? :(</button>
+      </span>
+
+      <div class="inputBox">
+        <input type="text" id="myInput" placeholder="Title...">
+        <button onclick="newElement()" class="addBtn">Add</button>
+      </div>
+    </div>
+
+    <ul id="myUL">
+      <li>
+        <span>Happy Coding :)</span>
+        <span class="close">&#215;</span>
+      </li>
+    </ul>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2>MY TODO-LIST</h2>
+        </div>
+        <div class="modal-body">
+          <img src="https://item.kakaocdn.net/do/54f95cfce79eb2df3b3425ae38cc5a7d8f324a0b9c48f77dbce3a43bd11ce785">
+          <p>오늘도 오셨군요!</p>
+          <p>하나씩 체크하면서 성취감을 느껴보세요.</p>
+        </div>
+        <div class="modal-footer">
+          <h3>2021-07-06</h3>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="todoList.js"></script>
+
+</html>
